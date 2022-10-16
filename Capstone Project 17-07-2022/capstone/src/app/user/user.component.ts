@@ -34,6 +34,18 @@ export class UserComponent implements OnInit {
        this.onReload();
   }
 
+
+  getById(id:number){
+    this.router.navigate(['/details']);
+    this.service.getById(id);
+    console.log("user Found");  
+    
+    //this.onReload();
+  }
+
+  flag=false;
+   
+
   onReload(){
     this.router.navigate(['/users']);
     this.ngOnInit(); 

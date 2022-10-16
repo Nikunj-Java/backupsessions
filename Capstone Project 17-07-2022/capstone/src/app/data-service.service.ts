@@ -33,6 +33,16 @@ export class DataServiceService {
        return this.getAllUser();
     });
   }
+
+
+  getById(id:number){
+    let endPoints = id;
+    this.http.get(this.url + endPoints).subscribe(data => {
+       return this.getById;
+    });
+  }
+
+   
   
   
   //post
