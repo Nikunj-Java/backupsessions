@@ -16,6 +16,14 @@ public class User {
 	private String name;
 	private String email;
 	private String country;
+	 
+	private int login;
+	public int getLogin() {
+		return login;
+	}
+	public void setLogin(int login) {
+		this.login = login;
+	}
 	public int getId() {
 		return id;
 	}

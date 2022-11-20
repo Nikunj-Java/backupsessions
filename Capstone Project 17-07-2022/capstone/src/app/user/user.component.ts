@@ -34,6 +34,8 @@ export class UserComponent implements OnInit {
        this.onReload();
   }
 
+   
+
 
   getById(id:number){
     this.router.navigate(['/details']);
@@ -51,6 +53,6 @@ export class UserComponent implements OnInit {
     this.ngOnInit(); 
   }
   
-  
+   
    
 }
