@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { FormComponent } from './form/form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ImagesComponent } from './images/images.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,15 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     UserComponent,
     FormComponent,
     ImagesComponent,
-    UserdetailsComponent
+    UserdetailsComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

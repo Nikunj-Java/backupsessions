@@ -3,7 +3,8 @@
 <table class="table table-bordered table-striped">
 <thead>
     <tr>
-        <th>Id</th><th>Name</th><th>Email</th><th>Contry</th><th>Action 1</th><th>Action 2</th><th>Authentication</th>
+        <th>Id</th><th>Name</th><th>Email</th><th>Contry</th>
+        <th>Action 1</th><th>Action 2</th><th>Action 3</th><th>Authentication</th>
     </tr>
 </thead>
 <tbody>
@@ -15,7 +16,12 @@
 
         <td *ngIf="u.login==1">Logged In</td>
         <td *ngIf="u.login==0">Logged OUT</td>
-        <td><button type="button" (click)='getById(u.id)' class="btn btn-primary">View</button></td>
+
+        <td><a href="/details/{{u.id}}"><button type="button" class="btn btn-primary">View</button></a></td>
+         
+        <td> <a routerLink="/edit/{{u.id}}">
+                    <button class="btn btn-primary">edit</button>
+                </a></td>
         <td><button type="button" (click)='BookDelete(u.id)' class="btn btn-danger">Delete</button></td>
     </tr>
 </tbody>

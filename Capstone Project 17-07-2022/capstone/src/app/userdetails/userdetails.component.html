@@ -1,19 +1,18 @@
-<h1> User List Details </h1>
+<h1>Customer Details Component</h1>
 
-<table class="table table-bordered table-striped">
-<thead>
-    <tr>
-        <th>Id</th><th>Name</th><th>Email</th><th>Contry</th><th>Action 1</th><th>Action 2</th><th>Authentication</th>
-    </tr>
-</thead>
-<tbody>
-    <tr *ngFor="let u of users">
-        <td>{{u.id}}</td>
-        <td>{{u.name}}</td>
-        <td>{{u.email}}</td>
-        <td>{{u.country}}</td>
-        <td >{{u.login}}</td>
-        
-</tbody>
-
-</table>
+<ul class="list-group">
+    <li class="list-group-item">
+        <b>Id:</b> {{user.id}}
+    </li>
+    <li class="list-group-item">
+        <b>Name:</b> {{user.name}}
+    </li>
+    <li class="list-group-item">
+        <b>Email:</b> {{user.email}}
+    </li>
+    <li class="list-group-item">
+        <b>Login Status: </b>
+        <b *ngIf="user.login==1">Logged In</b>
+        <b *ngIf="user.login==0">Logged OUT</b>
+    </li>
+</ul>

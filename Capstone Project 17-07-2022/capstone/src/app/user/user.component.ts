@@ -20,39 +20,13 @@ export class UserComponent implements OnInit {
   users:UserClass[];
 
   ngOnInit(): void {
-   // this.service.getAllUser().subscribe(result=>this.users=result);
-     this.getsoftBooks();
-     
-  }
-  getsoftBooks(){
-    this.service.getAllUser().subscribe(result=>this.users=result);
-  }
     
+    this.service.getAllUser().subscribe(result=>this.users=result);  
+  } 
   BookDelete(id:number){
+    this.users=this.users.filter(c=>c.id!==id)
        this.service.deletePost(id);
        console.log("user deleted");  
-       this.onReload();
   }
-
-   
-
-
-  getById(id:number){
-    this.router.navigate(['/details']);
-    this.service.getById(id);
-    console.log("user Found");  
-    
-    //this.onReload();
-  }
-
-  flag=false;
-   
-
-  onReload(){
-    this.router.navigate(['/users']);
-    this.ngOnInit(); 
-  }
-  
-   
    
 }

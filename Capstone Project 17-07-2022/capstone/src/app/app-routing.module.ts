@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EditUserComponent } from './edit-user/edit-user.component';
 import { FormComponent } from './form/form.component';
 import { ImagesComponent } from './images/images.component';
 import { UserComponent } from './user/user.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   {"path":"users",component:UserComponent},
   {"path":"form",component:FormComponent},
   {"path":"image",component:ImagesComponent},
-  {"path":"details",component:UserdetailsComponent}
+  {"path":"details/:id",component:UserdetailsComponent},
+  {path:'edit/:id',component:EditUserComponent}
 ];
 
 @NgModule({

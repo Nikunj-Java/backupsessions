@@ -34,22 +34,18 @@ export class DataServiceService {
     });
   }
 
-
-  getById(id:number){
-    let endPoints = id;
-    this.http.get(this.url + endPoints).subscribe(data => {
-       return this.getById;
-    });
-  }
-
-   
-  
-  
+  getCustomerById(id:number):Observable<UserClass>{
+    return this.http.get<UserClass>(this.url+id);
+   }
   //post
   create(data: any): Observable<any> {
     return this.http.post(this.url, data).pipe(
       catchError(this.handleError)
       );
+  }
+  //update
+  updateCustomer(cust:UserClass,id:number){
+    return this.http.put(this.url+id,cust)
   }
 
    // Handle API errors
