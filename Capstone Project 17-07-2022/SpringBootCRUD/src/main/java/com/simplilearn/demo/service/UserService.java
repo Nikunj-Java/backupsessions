@@ -42,6 +42,7 @@ public class UserService {
 			olduser.setName(newUser.getName());
 			olduser.setEmail(newUser.getEmail());
 			olduser.setCountry(newUser.getCountry());
+			olduser.setLogin(newUser.getLogin());
 			
 			return repo.save(olduser);
 		}

@@ -47,7 +47,7 @@ public class UserController {
 		User user= service.getUserById(id);
 		
 		if(user!=null)
-			return new ResponseEntity<User>(user, HttpStatus.FOUND);
+			return new ResponseEntity<User>(user, HttpStatus.OK);
 		else
 			return new ResponseEntity<User>(user, HttpStatus.NOT_FOUND);
 	}

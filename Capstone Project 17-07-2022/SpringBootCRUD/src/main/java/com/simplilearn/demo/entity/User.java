@@ -18,6 +18,7 @@ public class User {
 	private String country;
 	 
 	private int login;
+	
 	public int getLogin() {
 		return login;
 	}
