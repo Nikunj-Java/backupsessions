@@ -5,7 +5,7 @@ Spring web : which provide all sping web classes and interfaces to work
 Spring Data JPA: provies all classes and interfaces related to hibernate (persisetence)
 (@Entity, @Table, @Id, @GeneratedValue,@Column)
 MySQL Driver: MySQL database dependency to connect with Database
-Spring devtools: help you to restart your application automatically when you change code nof your application.
+Spring devtools: help you to restart your application automatically when you change code of your application.
 
 (add all this dependencies while creating a project)
 _______________________________________________________________
@@ -16,7 +16,7 @@ create Model (Entities)
 ---------------------------------------
 customer(id,name,phone, address,email,password)
 product(id, name,price, description, rating)
-admin (id,username,paasword)
+admin (id,username,password)
 categories(id, name, description)
 order(oid, pid, cid, payment)
 
@@ -75,7 +75,7 @@ class customerController{
 Test using PostMan tool.
 
 localhost:8081/api/customer (get, getById, put,post, delete)
-localhost:8081/api/products (get.getById,put, post, delete)
+localhost:8081/api/products (get,getById,put, post, delete)
 
 
 
